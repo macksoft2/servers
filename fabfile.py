@@ -10,7 +10,7 @@ def test():
 def commit():
     local("git add -p && git commit ")
     #local("git remote add origin git@github.com:manga/servers.git")
-    local("git origin master ")    
+    local("git push origin master ")    
 
 
 
