@@ -8,7 +8,7 @@ def test():
     local("./manage.py test servers")
 
 def commit():
-    local("git add -p && git commit")
+    local("git add -p && git commit ")
     local("git push origin master")    
 
 
