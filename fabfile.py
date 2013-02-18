@@ -9,7 +9,7 @@ def test():
 
 def commit():
     local("git add -p && git commit ")
-    local("git push servers")    
+    local("git push ")    
 
 
 
