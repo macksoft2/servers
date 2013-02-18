@@ -1,0 +1,19 @@
+{% if list_servers %}
+    <table border="2">
+    {% for server in list_servers %}
+	<tr>        
+	 <td>{{ server.nomServer }}</td>
+	<td>{{ server.typeOs }}</td>
+	<td>{{ server.typeReq }}</td>
+	<td>{{ server.url }}</td>
+	<td><a href="#">update</a></td>
+	<td><a href="{{ server.id }}/delete">delete</a></td>
+	</tr>
+    {% endfor %}
+	 <a href="servers/add">new</a>||
+	<a href="logout">log out</a>
+    </table>
+    </br>
+{% else %}
+    <p>0 serveur enregistré</p>
+{% endif %}
