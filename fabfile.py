@@ -9,7 +9,7 @@ def test():
 
 def commit():
     local("git add && git commit -a")
-    #local("git remote add origin git@github.com:manga/servers.git")
+    #local("git remote add origin git@github.com:macksoft2/servers.git")
     local("git push")    
 
 
