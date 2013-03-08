@@ -58,7 +58,6 @@ def deploy():
     test()
     commit()
     code_dir = '.'
-    run("mkdir testeManga")
     with settings(warn_only=True):
         if run("test -d %s" % code_dir):
             run("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
