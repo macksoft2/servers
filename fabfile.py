@@ -49,7 +49,7 @@ def test():
     local("./manage.py test servers")
 def commit():
     local("git add -p && git commit ")
-    local("git push -f")
+    #local("git push -f")
 def deploy():
     sudo('aptitude install -y python-setuptools apache2 libapache2-mod-wsgi')
     sudo('easy_install pip')
