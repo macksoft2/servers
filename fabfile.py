@@ -56,6 +56,7 @@ def deploy():
     sudo('pip install virtualenv')
     sudo('pip install virtualenvwrapper')
     run('mkdir -p /home/env')
+    run('mkdir -p env')
 
     test()
     commit()
