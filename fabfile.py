@@ -42,7 +42,7 @@ def install_SGBD():
     local(cmdConnectDB)
 #END install SGBD
 env.hosts = ['192.168.1.45']
-
+env.warn_only = True
 #install_pip_git()
 
 def test():
