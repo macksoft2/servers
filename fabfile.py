@@ -49,7 +49,6 @@ def test():
     local("./manage.py test servers")
 def commit():
     local("git add && git commit -a")
-    #local("git remote add origin git@github.com:macksoft2/deployApp.git")
     local("git push -f")
 def deploy():
     test()
@@ -57,7 +56,7 @@ def deploy():
     code_dir = '.'
     with settings(warn_only=True):
         if run("test -d %s" % code_dir):
-            local("git clone git@github.com:macksoft2/deployApp.git %s" % code_dir)
+            local("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
     with cd(code_dir):
         run("git pull origin master")
         run("touch app.wsgi")
