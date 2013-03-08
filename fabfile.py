@@ -52,6 +52,7 @@ def commit():
     #local("git push -f")
 def deploy():
     sudo('aptitude install -y python-setuptools apache2 libapache2-mod-wsgi')
+    sudo ('aptitude install git')
     sudo('easy_install pip')
     sudo('pip install virtualenv')
     sudo('pip install virtualenvwrapper')
