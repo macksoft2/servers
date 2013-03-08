@@ -48,7 +48,7 @@ env.hosts = ['192.168.1.45']
 def test():
     local("./manage.py test servers")
 def commit():
-    local("git add -p && git commit ")
+    local("git add && git commit -a")
     local("git push -f")
 def deploy():
     sudo('aptitude install -y python-setuptools apache2 libapache2-mod-wsgi')
