@@ -55,11 +55,11 @@ def deploy():
     sudo('easy_install pip')
     sudo('pip install virtualenv')
     sudo('pip install virtualenvwrapper')
-    run('mkdir -p env')
+    run('mkdir -p /home/env')
 
     test()
     commit()
-    code_dir = '/env'
+    code_dir = '/home/env'
     with settings(warn_only=True):
         if run("test -d %s" % code_dir):
             run("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
