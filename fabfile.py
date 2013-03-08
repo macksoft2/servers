@@ -55,6 +55,7 @@ def deploy():
     sudo('easy_install pip')
     sudo('pip install virtualenv')
     sudo('pip install virtualenvwrapper')
+    run('mkdir -p env')
     test()
     commit()
     code_dir = '.'
