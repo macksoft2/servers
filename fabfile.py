@@ -41,27 +41,24 @@ def install_SGBD():
     cmdConnectDB = cmdConnectDB+username+" -p"
     local(cmdConnectDB)
 #END install SGBD
-env.hosts = ['192.168.1.45']
-env.warn_only = True
+env.hosts = ['localhost']
 #install_pip_git()
 
 def test():
     local("./manage.py test servers")
 def commit():
     local("git add -p && git commit ")
-    #local("git push -f")
+    local("git push -f")
 def deploy():
-    sudo('aptitude install -y python-setuptools apache2 libapache2-mod-wsgi')
-    sudo ('aptitude install git')
-    sudo('easy_install pip')
-    sudo('pip install virtualenv')
-    sudo('pip install virtualenvwrapper')
-    run('mkdir -p /home/env')
-    run('mkdir -p env')
-
+    #sudo('aptitude install -y python-setuptools apache2 libapache2-mod-wsgi')
+    #sudo ('aptitude install git')
+    #sudo('easy_install pip')
+    #sudo('pip install virtualenv')
+    #sudo('pip install virtualenvwrapper')
+    #run('mkdir -p /home/env')
     test()
     commit()
-    code_dir = '/home/env'
+    code_dir = '/home/manga/deplyapp'
     with settings(warn_only=True):
         if run("test -d %s" % code_dir):
             run("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
