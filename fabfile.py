@@ -11,6 +11,7 @@ def deploy():
     #run('mkdir -p /home/env')
     local("git add .")
     local(" git commit ")
+    local("git push origin master")
     code_dir = '/home/manga/deplyapp'
     with settings(warn_only=True):
         if local("test -d %s" % code_dir):
