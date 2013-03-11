@@ -33,7 +33,7 @@ def install_mysql(mdp="passer"):
     fabtools.require.mysql.server(password=mdp)
 
 
-code_dir = "/home/manga/myapp/"
+code_dir = "/home"
 
 
 def commit(m=None):
