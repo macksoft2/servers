@@ -6,7 +6,6 @@ from fabric.contrib.console import confirm
 import fabtools.require
 from fabtools.python_distribute import is_distribute_installed, install_distribute
 from fabtools.require.python import  *
-#env.hosts = ['192.168.1.45']
 #--------------------------------------------debut fonctions -------------------------#
 def test():
     with settings(warn_only=True):
