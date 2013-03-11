@@ -33,7 +33,7 @@ def install_mysql(mdp="passer"):
     fabtools.require.mysql.server(password=mdp)
 
 
-code_dir = "/home"
+code_dir = "/repdeploy"
 
 
 def commit(m=None):
