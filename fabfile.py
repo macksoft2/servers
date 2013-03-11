@@ -19,7 +19,7 @@ def deploy():
     code_dir = 'testdeploy'
     with settings(warn_only=True):
         if local("test -d %s" % code_dir):
-            local("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
+            run("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
     with cd(code_dir):
         run("git pull origin master")
         local("touch app.wsgi")
