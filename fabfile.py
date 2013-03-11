@@ -49,12 +49,12 @@ def prepare_deploy():
     commit(message)
     push()
 
-@hosts('192.168.1.45')
+#@hosts('192.168.1.45')
 def deploy():
-    sudo("apt-get install git ")
+    #sudo("apt-get install git ")
     with cd(code_dir):
-        run("git pull origin master")
-        run("touch myapp.wsgi")
+        local("git pull origin master")
+        local("touch myapp.wsgi")
 
 
 
