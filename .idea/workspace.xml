@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1f435642-014d-4f7a-8d07-d8939afa530c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fabfile.py" afterPath="$PROJECT_DIR$/fabfile.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gestionServer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,7 +67,7 @@
       <file leaf-file-name="fabfile.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fabfile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="36" selection-start="459" selection-end="459" vertical-scroll-proportion="0.5321508">
+            <state line="4" column="25" selection-start="160" selection-end="160" vertical-scroll-proportion="0.1330377">
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
               </folding>
@@ -557,7 +556,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fabfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="36" selection-start="459" selection-end="459" vertical-scroll-proportion="0.5321508">
+        <state line="4" column="25" selection-start="160" selection-end="160" vertical-scroll-proportion="0.1330377">
           <folding>
             <element signature="e#24#61#0" expanded="true" />
           </folding>
