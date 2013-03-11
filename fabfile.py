@@ -51,6 +51,7 @@ def prepare_deploy():
 
 @hosts('192.168.1.45')
 def deploy():
+    sudo("apt-get install git ")
     with cd(code_dir):
         run("git pull origin master")
         run("touch myapp.wsgi")

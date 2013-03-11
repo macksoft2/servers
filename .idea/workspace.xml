@@ -7,7 +7,7 @@
     <ignored path="gestionServer.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="1f435642-014d-4f7a-8d07-d8939afa530c" time="1362993105009" ignored="false" />
-    <file path="/fabfile.py" changelist="1f435642-014d-4f7a-8d07-d8939afa530c" time="1363002627227" ignored="false" />
+    <file path="/fabfile.py" changelist="1f435642-014d-4f7a-8d07-d8939afa530c" time="1363002717689" ignored="false" />
     <file path="/settings.py" changelist="1f435642-014d-4f7a-8d07-d8939afa530c" time="1361358185544" ignored="false" />
     <file path="/urls.py" changelist="1f435642-014d-4f7a-8d07-d8939afa530c" time="1361359027759" ignored="false" />
     <file path="/views.py" changelist="1f435642-014d-4f7a-8d07-d8939afa530c" time="1361359281509" ignored="false" />
@@ -67,7 +67,7 @@
       <file leaf-file-name="fabfile.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fabfile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="17" selection-start="1183" selection-end="1183" vertical-scroll-proportion="0.135255">
+            <state line="53" column="32" selection-start="1614" selection-end="1614" vertical-scroll-proportion="0.7339246">
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
               </folding>
@@ -563,7 +563,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fabfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="17" selection-start="1183" selection-end="1183" vertical-scroll-proportion="0.135255">
+        <state line="53" column="32" selection-start="1614" selection-end="1614" vertical-scroll-proportion="0.7339246">
           <folding>
             <element signature="e#24#61#0" expanded="true" />
           </folding>
