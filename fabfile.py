@@ -2,8 +2,7 @@
 from __future__ import with_statement
 from fabric.api import *
 from fabric.operations import run,env,local,put
-env.hosts = ['192.168.1.7']
-env.user = ['root']
+env.hosts = ['192.168.1.45']
 
 def test():
     local("./manage.py test servers")
@@ -12,6 +11,7 @@ def commit():
     #local("git remote add origin git@github.com:macksoft2/servers.git")
     local("git push -f")
 def deploy():
+    sudo("apt-get install git ")
     test()
     commit()
     code_dir = '/home/manga/deplyapp'
@@ -19,5 +19,5 @@ def deploy():
         if local("test -d %s" % code_dir):
             local("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
     with cd(code_dir):
-        local("git pull origin master")
+        run("git pull origin master")
         local("touch app.wsgi")
