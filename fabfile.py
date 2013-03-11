@@ -52,6 +52,7 @@ def prepare_deploy():
 #@hosts('192.168.1.45')
 def deploy():
     #sudo("apt-get install git ")
+    local("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
     with cd(code_dir):
         local("git pull origin master")
         local("touch myapp.wsgi")
