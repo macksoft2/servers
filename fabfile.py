@@ -49,7 +49,7 @@ def prepare_deploy():
     commit(message)
     push()
 
-#@hosts('192.168.1.45')
+@hosts('192.168.1.45')
 def deploy():
     #sudo("apt-get install git ")
     run("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
