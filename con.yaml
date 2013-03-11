@@ -1,5 +1,0 @@
-cron:
-- description: hello
-  url: 
-  schedule: every 5 minutes from 10:00 to 14:00
-  timezone: 'America/Chicago'
