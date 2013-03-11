@@ -6,7 +6,8 @@ from fabric.contrib.console import confirm
 import fabtools.require
 from fabtools.python_distribute import is_distribute_installed, install_distribute
 from fabtools.require.python import  *
-env.hosts = ['192.168.1.45']
+#env.hosts = ['192.168.1.45']
+#--------------------------------------------debut fonctions -------------------------#
 def test():
     with settings(warn_only=True):
         result = local('./manage.py test servers', capture=True)
@@ -27,28 +28,34 @@ def install_packages():
     if not is_pip_installed():
         install_pip()
 
-def install_mysql():
+def install_mysql(mdp="passer"):
     #installtion de mysql
-    fabtools.require.mysql.server(password='passer12')
+    fabtools.require.mysql.server(password=mdp)
 
-def commit():
-    local("git add -p && git commit")
+
+code_dir = "/home/manga/myapp/"
+
+
+def commit(m=None):
+    local("git add . && git commit -m \"%s\"" % m)
 
 def push():
-    local("git push")
+    local("git push origin master")
+#--------------------------------------------- End dev fonctions-----------------------------------#
 
+@hosts('localhost:8000')
 def prepare_deploy():
-    test()
-    commit()
+    message = raw_input("Enter a git commit message:  ")
+    commit(message)
     push()
 
+@hosts('192.168.1.7')
 def deploy():
-    code_dir = '/home/manga/deplyapp'
-    #sudo("mkdir -p deploymanga")
-    #cd("deploymanga")
-    with settings(warn_only=True):
-        if local("test -d %s" % code_dir).failed:
-            local("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
     with cd(code_dir):
-        local("git pull origin master")
-        local("touch app.wsgi")
+        run("git pull origin master")
+        run("touch myapp.wsgi")
+
+
+
+
+
