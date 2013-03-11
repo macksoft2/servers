@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1f435642-014d-4f7a-8d07-d8939afa530c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fabfile.py" afterPath="$PROJECT_DIR$/fabfile.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gestionServer.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="1f435642-014d-4f7a-8d07-d8939afa530c" time="1362993105009" ignored="false" />
-    <file path="/fabfile.py" changelist="1f435642-014d-4f7a-8d07-d8939afa530c" time="1362998971158" ignored="false" />
+    <file path="/fabfile.py" changelist="1f435642-014d-4f7a-8d07-d8939afa530c" time="1362999720136" ignored="false" />
     <file path="/settings.py" changelist="1f435642-014d-4f7a-8d07-d8939afa530c" time="1361358185544" ignored="false" />
     <file path="/urls.py" changelist="1f435642-014d-4f7a-8d07-d8939afa530c" time="1361359027759" ignored="false" />
     <file path="/views.py" changelist="1f435642-014d-4f7a-8d07-d8939afa530c" time="1361359281509" ignored="false" />
@@ -68,7 +67,7 @@
       <file leaf-file-name="fabfile.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fabfile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="29" selection-start="849" selection-end="849" vertical-scroll-proportion="0.033259425">
+            <state line="53" column="14" selection-start="1570" selection-end="1570" vertical-scroll-proportion="0.93348116">
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
               </folding>
@@ -564,7 +563,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fabfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="29" selection-start="849" selection-end="849" vertical-scroll-proportion="0.033259425">
+        <state line="53" column="14" selection-start="1570" selection-end="1570" vertical-scroll-proportion="0.93348116">
           <folding>
             <element signature="e#24#61#0" expanded="true" />
           </folding>

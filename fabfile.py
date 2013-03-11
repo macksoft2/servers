@@ -43,12 +43,12 @@ def prepare_deploy():
     push()
 
 def deploy():
-    code_dir = '/deploymanga'
-    sudo("mkdir -p deploymanga")
-    cd("deploymanga")
+    code_dir = '/home/manga/deplyapp'
+    #sudo("mkdir -p deploymanga")
+    #cd("deploymanga")
     with settings(warn_only=True):
-        if run("test -d %s" % code_dir).failed:
-            run("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
+        if local("test -d %s" % code_dir).failed:
+            local("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
     with cd(code_dir):
-        run("git pull origin master")
-        run("touch app.wsgi")
+        local("git pull origin master")
+        local("touch app.wsgi")
