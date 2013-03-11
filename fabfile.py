@@ -51,7 +51,7 @@ def prepare_deploy():
 def deploy():
     code_dir = "/home"
     #sudo("apt-get update git ")
-    run("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
+    local("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
     with cd(code_dir):
-        run("git pull origin master")
-        run("touch myapp.wsgi")
+        local("git pull origin master")
+        local("touch myapp.wsgi")
