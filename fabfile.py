@@ -12,11 +12,10 @@ def commit():
     local("git push -f")
 def deploy():
     sudo("apt-get install git ")
-    sudo("cd  /home")
-    sudo("mkdir testdeploy")
+    #sudo("mkdir testdeploy")
     test()
     commit()
-    code_dir = '/home/testdeploy'
+    code_dir = '/testdeploy'
     with settings(warn_only=True):
         if local("test -d %s" % code_dir):
             local("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
