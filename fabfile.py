@@ -49,7 +49,7 @@ def prepare_deploy():
     commit(message)
     push()
 
-@hosts('192.168.1.7')
+@hosts('192.168.1.45')
 def deploy():
     with cd(code_dir):
         run("git pull origin master")
