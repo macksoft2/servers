@@ -1,17 +1,20 @@
+# -*- coding: utf-8 -*-
 from __future__ import with_statement
 from fabric.api import *
-from fabric.contrib.console import confirm
+from fabric.operations import run,env,local,put
+env.hosts = ['192.168.1.45']
+env.user = ['root']
 
+def test():
+    local("./manage.py test servers")
+def commit():
+    local("git add && git commit -a")
+    local("git remote add origin git@github.com:macksoft2/servers.git")
+    local("git push -f")
 def deploy():
-    #sudo('aptitude install -y python-setuptools apache2 libapache2-mod-wsgi')
-    #sudo ('aptitude install git')
-    #sudo('easy_install pip')
-    #sudo('pip install virtualenv')
-    #sudo('pip install virtualenvwrapper')
-    #run('mkdir -p /home/env')
-    local("git add .")
-    local(" git commit ")
-    code_dir = '/home/manga/deplyapp'
+    test()
+    commit()
+    code_dir = '/home/manga/deploiement'
     with settings(warn_only=True):
         if local("test -d %s" % code_dir):
             local("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
