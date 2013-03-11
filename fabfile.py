@@ -33,8 +33,6 @@ def install_mysql(mdp="passer"):
     fabtools.require.mysql.server(password=mdp)
 
 
-code_dir = "/home"
-
 
 def commit(m=None):
     local("git add . && git commit -m \"%s\"" % m)
@@ -51,7 +49,8 @@ def prepare_deploy():
 
 @hosts('192.168.1.45')
 def deploy():
-    #sudo("apt-get install git ")
+    code_dir = "/home"
+    #sudo("apt-get update git ")
     run("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
     with cd(code_dir):
         run("git pull origin master")
