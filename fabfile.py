@@ -51,6 +51,7 @@ def deploy():
     code_dir = "/home/home_manga"
     sudo("cd /home & mkdir -p  home_manga")
     #sudo("apt-get update git ")
+    local("ssh-add ~/.ssh/id_rsa")
     run("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
     with cd(code_dir):
         run("git pull origin master")
