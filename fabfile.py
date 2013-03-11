@@ -37,7 +37,7 @@ def commit(m=None):
     local("git add . && git commit -m \"%s\"" % m)
 
 def push():
-    local("git push origin master")
+    local("git push ")
 #--------------------------------------------- End dev fonctions-----------------------------------#
 
 @hosts('localhost:8000')
