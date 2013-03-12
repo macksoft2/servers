@@ -46,7 +46,7 @@ def prepare_deploy():
     commit()
     push()
 
-def deploy(chemin='/home',rep='testdeploy'):
+def deploy():
     sudo("cd /home  & mkdir -p  mangatestdeploy")
     code_dir = '/home/mangatestdeploy'
     run("chmod 600 .ssh/authorized_keys")
