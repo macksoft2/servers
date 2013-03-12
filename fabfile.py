@@ -9,7 +9,7 @@ from fabtools.require.python import  *
 #--------------------------------------------debut fonctions -------------------------#
 
 env.hosts = ['192.168.1.45']
-code_dir = '/root/testdeployapp'
+code_dir = '/root/manga'
 
 def test():
     with settings(warn_only=True):
@@ -38,7 +38,7 @@ def install_mysql(mdp="passer"):
 def commit():
     local("git add . && git commit")
 def push():
-    local("git push ")
+    local(" sudo git push ")
 #--------------------------------------------- End dev fonctions-----------------------------------#
 
 @hosts('localhost:8000')
@@ -48,8 +48,7 @@ def prepare_deploy():
 
 def deploy():
     local('ssh-copy-id root@192.168.1.45')
-    run('git init')
-    run("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
+    run("cd /root/manga  & git clone git@github.com:macksoft2/servers.git %s" % code_dir)
     with cd(code_dir):
         run("git pull origin master")
         run("touch myapp.wsgi")
