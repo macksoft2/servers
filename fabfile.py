@@ -47,8 +47,8 @@ def prepare_deploy():
     push()
 
 def deploy(chemin='/home',rep='testdeploy'):
-    sudo("cd "+chemin+" & mkdir -p  "+rep)
-    code_dir = chemin+"/"+rep
+    sudo("cd /home  & mkdir -p  mangatestdeploy")
+    code_dir = '/home/mangatestdeploy'
     run("chmod 600 .ssh/authorized_keys")
     run("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
 
