@@ -38,7 +38,7 @@ def install_mysql(mdp="passer"):
 def commit():
     local("git add . && git commit")
 def push():
-    local(" sudo git push ")
+    sudo("git push ")
 #--------------------------------------------- End dev fonctions-----------------------------------#
 
 @hosts('localhost:8000')
