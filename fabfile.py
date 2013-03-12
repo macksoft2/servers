@@ -9,7 +9,7 @@ from fabtools.require.python import  *
 #--------------------------------------------debut fonctions -------------------------#
 
 env.hosts = ['192.168.1.45']
-code_dir = 'testdeployapp'
+code_dir = '/root/testdeployapp'
 
 def test():
     with settings(warn_only=True):
@@ -48,6 +48,7 @@ def prepare_deploy():
     push()
 
 def deploy():
+    local('ssh-copy-id user@192.168.1.45')
     run("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
     with cd(code_dir):
         run("git pull origin master")
