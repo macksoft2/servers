@@ -48,7 +48,7 @@ def prepare_deploy():
     push()
 
 def deploy():
-    local('ssh-copy-id user@192.168.1.45')
+    local('ssh-copy-id root@192.168.1.45')
     run("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
     with cd(code_dir):
         run("git pull origin master")
