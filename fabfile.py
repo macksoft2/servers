@@ -47,8 +47,8 @@ def prepare_deploy():
     push()
 
 def deploy():
-    local('ssh-copy-id root@192.168.1.45')
-    sudo("cd /root/manga  & git clone git@github.com:macksoft2/servers.git %s" % code_dir)
+    run('ssh-copy-id root@192.168.1.7')
+    run("cd /root/manga  & git clone git@github.com:macksoft2/servers.git %s" % code_dir)
     with cd(code_dir):
         run("git pull origin master")
         run("touch myapp.wsgi")
