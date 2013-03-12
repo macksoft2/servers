@@ -49,7 +49,7 @@ def prepare_deploy():
 def deploy():
     sudo("cd /home  & mkdir -p  mangatestdeploy")
     code_dir = '/home/mangatestdeploy'
-    run("chmod 600 .ssh/authorized_keys")
+    #local("chmod 600 .ssh/authorized_keys")
     run("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
 
     with cd(code_dir):
