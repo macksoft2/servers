@@ -8,7 +8,7 @@ from fabtools.python_distribute import is_distribute_installed, install_distribu
 from fabtools.require.python import  *
 #--------------------------------------------debut fonctions -------------------------#
 
-env.hosts = ['198.168.1.45']
+env.hosts = ['192.168.1.45']
 
 def test():
     with settings(warn_only=True):
@@ -51,7 +51,6 @@ def deploy():
     code_dir = '/home/mangatestdeploy'
     #local("chmod 600 .ssh/authorized_keys")
     run("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
-
     with cd(code_dir):
         run("git pull origin master")
         run("touch myapp.wsgi")
