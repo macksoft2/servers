@@ -49,7 +49,8 @@ def prepare_deploy():
 
 def deploy():
     run("chmod 600 .ssh/authorized_keys")
-    run("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
+    sudo("apt-get install git ")
+    run("git clone ssh://git@github.com:macksoft2/servers.git %s" % code_dir)
     with cd(code_dir):
         run("git pull origin master")
         run("touch myapp.wsgi")
