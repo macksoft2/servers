@@ -40,7 +40,7 @@ def commit():
 
 def push():
     local('git remote add servers git@github.com:macksoft2/servers.git')
-    local("git push ")
+    #local("git push ")
 #--------------------------------------------- End dev fonctions-----------------------------------#
 
 @hosts('localhost:8000')
