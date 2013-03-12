@@ -37,7 +37,6 @@ def install_mysql(mdp="passer"):
 
 def commit():
     local("git add . && git commit")
-
 def push():
     local("git push ")
 #--------------------------------------------- End dev fonctions-----------------------------------#
