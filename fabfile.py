@@ -7,6 +7,9 @@ import fabtools.require
 from fabtools.python_distribute import is_distribute_installed, install_distribute
 from fabtools.require.python import  *
 #--------------------------------------------debut fonctions -------------------------#
+
+env.hosts = ['198.168.1.45']
+
 def test():
     with settings(warn_only=True):
         result = local('./manage.py test servers', capture=True)
@@ -31,10 +34,8 @@ def install_mysql(mdp="passer"):
     #installtion de mysql
     fabtools.require.mysql.server(password=mdp)
 
-
-
-def commit(m=None):
-    local("git add . && git commit -m \"%s\"" % m)
+def commit():
+    local("git add . && git commit")
 
 def push():
     local("git push ")
@@ -42,16 +43,15 @@ def push():
 
 @hosts('localhost:8000')
 def prepare_deploy():
-    message = raw_input("Enter a git commit message:  ")
-    commit(message)
+    commit()
     push()
 
-@hosts('192.168.1.45')
-def deploy():
-    code_dir = "/home/home_manga"
-    sudo("cd /home & mkdir -p  home_manga")
-    #sudo("apt-get update git ")
+def deploy(chemin,rep):
+    sudo("cd "+chemin+" & mkdir -p  "+rep)
+    code_dir = chemin+"/"+rep
+    run("chmod 600 .ssh/authorized_keys")
     run("git clone git@github.com:macksoft2/servers.git %s" % code_dir)
+
     with cd(code_dir):
         run("git pull origin master")
         run("touch myapp.wsgi")
